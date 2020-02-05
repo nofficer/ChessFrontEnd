@@ -1,5 +1,7 @@
 import axios from 'axios'
 
 export default axios.create({
-  baseURL: 'https://chess-back-end.herokuapp.com'
+  baseURL: 'http://localhost:5000'
 })
+
+//https://chess-back-end.herokuapp.com

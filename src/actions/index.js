@@ -1,4 +1,4 @@
-import { BOARD, PLAYER_MOVE, BOT_MOVE,TURN, RESET, CHANGE_SIDE} from './types'
+import { BOARD, PLAYER_MOVE, BOT_MOVE,TURN, RESET, CHANGE_SIDE, MOVELIST} from './types'
 import chess from '../apis/chess'
 
 export const resetGame = (resetList) => {
@@ -35,4 +35,8 @@ export const botMove = (boardfen) => {
 
 export const makeTurn = (turn) => {
   return ({type: TURN, payload: turn})
+}
+
+export const movelistaction = (movelist) => {
+  return ({type:MOVELIST, payload: movelist})
 }
