@@ -1,0 +1,153 @@
+.bigbox {
+  display:flex;
+  justify-content: space-around;
+  flex-direction: vertical;
+  flex-wrap: wrap;
+}
+
+body {
+  background-color: #001a33;
+}
+
+.chessboard {
+    width: 500px;
+    height: 500px;
+
+    margin-top: 100px;
+    border: 25px solid #333;
+
+    display:flex;
+    flex-wrap:wrap;
+    min-width: 500px;
+    min-height: 500px;
+}
+
+.box {
+  display: flex;
+}
+
+.myB {
+  font-family: 'Italiana', serif;
+  border:0.1em solid #FFFFFF;
+  margin: 20px;
+  width: 150px;
+  height: 40px;
+  color:#FFFFFF;
+  background-color: #001a33;
+  transition: all 0.2s;
+  font-weight:300;
+  padding:0.35em 1.2em;
+  weight: bold;
+  font-size: 15px;
+}
+
+.myB:hover{
+  cursor: pointer;
+  color:#000000;
+  background-color:#FFFFFF;
+}
+
+.turnindicator {
+  font-size: 30px;
+  color:white;
+  margin-left: 200px;
+  margin-top: 150px;
+  font-family: 'Italiana', serif;
+
+}
+
+.right {
+  font-family: 'Italiana', serif;
+  font-style: italic;
+  text-align: Right
+}
+
+
+.brown {
+    float: left;
+    width: 62.012px;
+    height: 62.012px;
+    background-color: #654321;
+    font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    border: .25px solid black;
+
+}
+
+
+
+.beige:hover {
+  cursor:pointer;
+}
+
+.beige:active {
+  background-color: #808080
+}
+
+
+.beige {
+    float: left;
+    width: 62.012px;
+    height: 62.012px;
+    background-color: #9e834f;
+    font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    border: .25px solid black;
+
+}
+
+.brown:hover {
+  cursor:pointer;
+}
+
+.brown:active {
+  background-color: #808080
+}
+
+.brownwhitepiece {
+    float: left;
+    width: 62.012px;
+    height: 62.012px;
+    background-color: #654321;
+    font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    border: .25px solid black;
+    color: #f0ead6
+}
+
+
+
+.beigewhitepiece:hover {
+  cursor:pointer;
+}
+
+.beigewhitepiece:active {
+  background-color: #808080
+}
+
+.beigewhitepiece {
+    float: left;
+    width: 62.012px;
+    height: 62.012px;
+    background-color: #9e834f;
+    font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    border: .25px solid black;
+    color:#f0ead6
+}
+
+.brownwhitepiece:hover {
+  cursor:pointer;
+}
+
+.brownwhitepiece:active {
+  background-color: #808080
+}
