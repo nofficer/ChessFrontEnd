@@ -166,7 +166,8 @@ body {
 
       display:flex;
       flex-wrap:wrap;
-      min-width: 375px
+      min-width: 375px;
+      max-width: 375px;
   }
 
 }
@@ -176,6 +177,8 @@ body {
       float: left;
       width: 46.3px;
       height: 46.3px;
+      max-width: 46.3px;
+      max-height: 46.3px;
       background-color: #654321;
       font-size:37.5px;
       text-align:center;
@@ -189,6 +192,8 @@ body {
       float: left;
       width: 46.3px;
       height: 46.3px;
+      max-width: 46.3px;
+      max-height: 46.3px;
       background-color: #9e834f;
       font-size:37.5px;
       text-align:center;
@@ -201,6 +206,8 @@ body {
       float: left;
       width: 46.3px;
       height: 46.3px;
+      max-width: 46.3px;
+      max-height: 46.3px;
       background-color: #654321;
       font-size:37.5px;
       text-align:center;
@@ -213,6 +220,8 @@ body {
       float: left;
       width: 46.3px;
       height: 46.3px;
+      max-width: 46.3px;
+      max-height: 46.3px;
       background-color: #9e834f;
       font-size:37.5px;
       text-align:center;
@@ -243,6 +252,8 @@ body {
   .chessboard {
       width: 250px;
       height: 250px;
+      max-width: 250px;
+      max-height: 250px;
       margin-top: 100px;
       border: 25px solid #333;
 
@@ -258,6 +269,8 @@ body {
       float: left;
       width: 30.7px;
       height: 30.7px;
+      max-width: 30.7px;
+      max-height: 30.7px;
       background-color: #654321;
       font-size:25px;
       text-align:center;
@@ -271,6 +284,8 @@ body {
       float: left;
       width: 30.7px;
       height: 30.7px;
+      max-width: 30.7px;
+      max-height: 30.7px;
       background-color: #9e834f;
       font-size:25px;
       text-align:center;
@@ -283,6 +298,8 @@ body {
       float: left;
       width: 30.7px;
       height: 30.7px;
+      max-width: 30.7px;
+      max-height: 30.7px;
       background-color: #654321;
       font-size:25px;
       text-align:center;
@@ -295,6 +312,8 @@ body {
       float: left;
       width: 30.7px;
       height: 30.7px;
+      max-width: 30.7px;
+      max-height: 30.7px;
       background-color: #9e834f;
       font-size:25px;
       text-align:center;
