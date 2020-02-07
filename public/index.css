@@ -157,7 +157,7 @@ body {
 }
 
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 4000px) {
   .chessboard {
       width: 375px;
       height: 375px;
@@ -171,7 +171,7 @@ body {
 
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 4000px) {
   .brown {
       float: left;
       width: 46.3px;
@@ -227,6 +227,7 @@ body {
     margin-left: 50px;
     margin-top: 150px;
     font-family: 'Italiana', serif;
+
 
   }
 
