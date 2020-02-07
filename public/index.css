@@ -12,15 +12,31 @@ body {
 .chessboard {
     width: 500px;
     height: 500px;
-
     margin-top: 100px;
     border: 25px solid #333;
 
     display:flex;
     flex-wrap:wrap;
-    min-width: 500px;
-    min-height: 500px;
+    min-width:500px;
 }
+
+
+
+@media screen and (max-width: 1020px) {
+  .chessboard {
+      width: 250px;
+      height: 250px;
+      margin-top: 100px;
+      border: 25px solid #333;
+
+      display:flex;
+      flex-wrap:wrap;
+      min-width:250px;
+  }
+
+}
+
+
 
 .box {
   display: flex;
@@ -150,4 +166,71 @@ body {
 
 .brownwhitepiece:active {
   background-color: #808080
+}
+
+@media screen and (max-width: 1020px) {
+  .brown {
+      float: left;
+      width: 30.7px;
+      height: 30.7px;
+      background-color: #654321;
+      font-size:25px;
+      text-align:center;
+      display: table-cell;
+      vertical-align:middle;
+      border: .25px solid black;
+
+  }
+
+  .beige {
+      float: left;
+      width: 30.7px;
+      height: 30.7px;
+      background-color: #9e834f;
+      font-size:25px;
+      text-align:center;
+      display: table-cell;
+      vertical-align:middle;
+      border: .25px solid black;
+
+  }
+  .brownwhitepiece {
+      float: left;
+      width: 30.7px;
+      height: 30.7px;
+      background-color: #654321;
+      font-size:25px;
+      text-align:center;
+      display: table-cell;
+      vertical-align:middle;
+      border: .25px solid black;
+      color: #f0ead6
+  }
+  .beigewhitepiece {
+      float: left;
+      width: 30.7px;
+      height: 30.7px;
+      background-color: #9e834f;
+      font-size:25px;
+      text-align:center;
+      display: table-cell;
+      vertical-align:middle;
+      border: .25px solid black;
+      color:#f0ead6
+  }
+  .turnindicator {
+    font-size: 30px;
+    color:white;
+    margin-left: 50px;
+    margin-top: 150px;
+    font-family: 'Italiana', serif;
+
+  }
+
+  .right {
+    font-family: 'Italiana', serif;
+    font-style: italic;
+    text-align: Center;
+  }
+
 }
