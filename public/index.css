@@ -74,30 +74,6 @@ body {
   background-color: #808080
 }
 
-.beigeblank:hover {
-  cursor:pointer;
-}
-
-.beigeblank:active {
-  color:#808080;
-  background-color: #808080
-}
-
-
-
-.brownblank:hover {
-  cursor:pointer;
-}
-
-.brownblank:active {
-  color:#808080;
-  background-color: #808080
-}
-
-
-
-
-
 .beigewhitepiece:hover {
   cursor:pointer;
 }
@@ -140,7 +116,7 @@ tbody {
     min-height:12.5%;
     min-width: 12.5%;
     background-color: #654321;
-    font-size:200%;
+    font-size:275%;
     padding:0px;
     text-align:center;
     display: table-cell;
@@ -154,7 +130,7 @@ tbody {
   min-height:12.5%;
   min-width: 12.5%;
   background-color: #9e834f;
-  font-size:200%;
+  font-size:275%;
   padding:0px;
   text-align:center;
   display: table-cell;
@@ -167,7 +143,7 @@ tbody {
     min-height:12.5%;
     min-width: 12.5%;
     background-color: #654321;
-    font-size:200%;
+    font-size:275%;
     padding:0px;
     text-align:center;
     display: table-cell;
@@ -180,7 +156,7 @@ tbody {
     min-height:12.5%;
     min-width: 12.5%;
     background-color: #9e834f;
-    font-size:200%;
+    font-size:275%;
     padding:0px;
     text-align:center;
     display: table-cell;
@@ -207,7 +183,7 @@ tbody {
       min-height:12.5%;
       min-width: 12.5%;
       background-color: #654321;
-      font-size:100%;
+      font-size:120%;
       text-align:center;
       padding:0px;
       border: .25px solid black;
@@ -219,7 +195,7 @@ tbody {
       min-height:12.5%;
       min-width: 12.5%;
       background-color: #9e834f;
-      font-size:100%;
+      font-size:120%;
       text-align:center;
       padding:0px;
       border: .25px solid black;
@@ -230,7 +206,7 @@ tbody {
       min-height:12.5%;
       min-width: 12.5%;
       background-color: #654321;
-      font-size:100%;
+      font-size:120%;
       text-align:center;
       padding:0px;
       border: .25px solid black;
@@ -241,7 +217,7 @@ tbody {
       min-height:12.5%;
       min-width: 12.5%;
       background-color: #9e834f;
-      font-size:100%;
+      font-size:120%;
       text-align:center;
       padding:0px;
       border: .25px solid black;
