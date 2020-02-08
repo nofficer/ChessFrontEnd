@@ -2,12 +2,28 @@ import React from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { makeMove, getBoard, botMove, makeTurn, resetGame, movelistaction} from '../actions'
+import Fragment from 'react'
 
 
 
 function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
   }
+
+function listToMatrix(list, elementsPerSubArray) {
+    var matrix = [], i, k;
+
+    for (i = 0, k = -1; i < list.length; i++) {
+        if (i % elementsPerSubArray === 0) {
+            k++;
+            matrix[k] = [];
+        }
+
+        matrix[k].push(list[i]);
+    }
+
+    return matrix;
+}
 
 var mapper = {'a8': 0, 'b8': 1, 'c8': 2, 'd8': 3, 'e8': 4, 'f8': 5, 'g8': 6, 'h8': 7, 'a7': 8, 'b7': 9, 'c7': 10, 'd7': 11, 'e7': 12, 'f7': 13, 'g7': 14, 'h7': 15, 'a6'
 : 16, 'b6': 17, 'c6': 18, 'd6': 19, 'e6': 20, 'f6': 21, 'g6': 22, 'h6': 23, 'a5': 24, 'b5': 25, 'c5': 26, 'd5': 27, 'e5': 28, 'f5': 29, 'g5': 30, 'h5': 31,
@@ -77,34 +93,63 @@ class App extends React.Component {
     if(piece > 6) {
       var piececlass = "whitepiece"
     }
+
     else {
       var piececlass = ""
     }
-      colour = colour + piececlass
-      return (
-        <div key={i} onClick = {(e) => this.holdMove(e.target.id)} id={i} class={colour} >{pieceMap[piece]}</div>
-      )
+      colour = colour + piececlass + ' col'
+    return (
+          <div key={i} onClick = {(e) => this.holdMove(e.target.id)} id={i} class={colour} >{pieceMap[piece]}</div>
+        )
   }
 
   renderList(board){
-
     if(board){
+      var matrix = listToMatrix(board,8)
       var i = -1
       var c = [0,2,4,6,9,11,13,15,16,18,20,22,25,27,29,31,32,34,36,38,41,43,45,47,48,50,52,54,57,59,61,63]
-      return board.map((piece) => {
-        i++
-        if(c.includes(i)){
-          return this.makePiece(piece.toString(), i, 'beige' )
-        }
-        else{
-          return this.makePiece(piece.toString(), i, 'brown' )
-        }
-      })
-    }
+      var n = -1
+      return (matrix.map((row) =>{
+        n++
+        return (<div class='row row-cols-8 chessrow flex-nowrap'>{
+          row.map((piece) => {
+            i++
+            if(row.includes(piece)) {
+              if(c.includes(i)){
+                return (this.makePiece(piece.toString(), i, 'beige' ))
+              }
+              else {
+                return (this.makePiece(piece.toString(), i, 'brown'))
+              }
+
+            }
+
+          })
+        }</div>) }))
+      }
     else {
       return "Board Loading..."
-    }
-  }
+        }
+}
+
+
+
+      // return board.map((piece) => {
+      //   i++
+      //   if(c.includes(i) && r.includes(i)){
+      //     return (this.makePiece(piece.toString(), i, 'beige', 'end' ))
+      //   }
+      //   else if (r.includes(i)) {
+      //     return this.makePiece(piece.toString(), i, 'brown', 'end')
+      //   }
+      //   else if (c.includes(i)) {
+      //     return (this.makePiece(piece.toString(), i, 'beige', 'not' ))
+      //   }
+      //   else {
+      //     return this.makePiece(piece.toString(), i, 'brown', 'not')
+      //   }
+      // })
+
 
   resetfunc(whoturn,switchside){
     var side = this.props.side
@@ -138,9 +183,10 @@ class App extends React.Component {
           New Game
           </button>
           </div>
-        <div class="chessboard">
-        {this.renderList(this.props.board)}
+        <div class="chessboard container">
+            {this.renderList(this.props.board)}
         </div>
+
 
       </div>
     )

@@ -7,23 +7,8 @@
 
 body {
   background-color: #001a33;
+  font-family: "Roboto"
 }
-
-.chessboard {
-    width: 500px;
-    height: 500px;
-    margin-top: 100px;
-    border: 25px solid #333;
-
-    display:flex;
-    flex-wrap:wrap;
-    min-width:500px;
-}
-
-
-
-
-
 
 
 .box {
@@ -67,18 +52,6 @@ body {
 }
 
 
-.brown {
-    float: left;
-    width: 62.012px;
-    height: 62.012px;
-    background-color: #654321;
-    font-size:50px;
-    text-align:center;
-    display: table-cell;
-    vertical-align:middle;
-    border: .25px solid black;
-
-}
 
 
 
@@ -87,22 +60,11 @@ body {
 }
 
 .beige:active {
+
   background-color: #808080
 }
 
 
-.beige {
-    float: left;
-    width: 62.012px;
-    height: 62.012px;
-    background-color: #9e834f;
-    font-size:50px;
-    text-align:center;
-    display: table-cell;
-    vertical-align:middle;
-    border: .25px solid black;
-
-}
 
 .brown:hover {
   cursor:pointer;
@@ -112,18 +74,27 @@ body {
   background-color: #808080
 }
 
-.brownwhitepiece {
-    float: left;
-    width: 62.012px;
-    height: 62.012px;
-    background-color: #654321;
-    font-size:50px;
-    text-align:center;
-    display: table-cell;
-    vertical-align:middle;
-    border: .25px solid black;
-    color: #f0ead6
+.beigeblank:hover {
+  cursor:pointer;
 }
+
+.beigeblank:active {
+  color:#808080;
+  background-color: #808080
+}
+
+
+
+.brownblank:hover {
+  cursor:pointer;
+}
+
+.brownblank:active {
+  color:#808080;
+  background-color: #808080
+}
+
+
 
 
 
@@ -135,18 +106,7 @@ body {
   background-color: #808080
 }
 
-.beigewhitepiece {
-    float: left;
-    width: 62.012px;
-    height: 62.012px;
-    background-color: #9e834f;
-    font-size:50px;
-    text-align:center;
-    display: table-cell;
-    vertical-align:middle;
-    border: .25px solid black;
-    color:#f0ead6
-}
+
 
 .brownwhitepiece:hover {
   cursor:pointer;
@@ -156,80 +116,143 @@ body {
   background-color: #808080
 }
 
+tbody {
+  width:100%;
+  height:100%
+}
 
-@media screen and (max-width: 4000px) {
-  .chessboard {
-      width: 375px;
-      height: 375px;
-      margin-top: 100px;
-      border: 25px solid #333;
 
-      display:flex;
-      flex-wrap:wrap;
-      min-width: 375px;
-      max-width: 375px;
-  }
+
+.chessrow {
+  width:100%;
+  height:12.5%;
+}
+
+.chessboard {
+    margin-top:50px;
+    width:500px;
+    height:500px;
+    padding:0px;
+    border: 25px solid #333;
+}
+.brown {
+    float: left;
+    min-height:12.5%;
+    min-width: 12.5%;
+    background-color: #654321;
+    font-size:200%;
+    padding:0px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    border: .25px solid black;
 
 }
 
-@media screen and (max-width: 4000px) {
+.beige {
+  float: left;
+  min-height:12.5%;
+  min-width: 12.5%;
+  background-color: #9e834f;
+  font-size:200%;
+  padding:0px;
+  text-align:center;
+  display: table-cell;
+  vertical-align:middle;
+  border: .25px solid black;
+
+}
+.brownwhitepiece {
+    float: left;
+    min-height:12.5%;
+    min-width: 12.5%;
+    background-color: #654321;
+    font-size:200%;
+    padding:0px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    border: .25px solid black;
+    color: #f0ead6
+}
+.beigewhitepiece {
+    float: left;
+    min-height:12.5%;
+    min-width: 12.5%;
+    background-color: #9e834f;
+    font-size:200%;
+    padding:0px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    border: .25px solid black;
+    color:#f0ead6
+}
+
+
+.row {
+  margin: 0px;
+}
+
+@media screen and (max-width: 550px) {
+  .chessboard{
+    width:250px;
+    height:250px;
+  }
+}
+
+@media screen and (max-width: 550px) {
   .brown {
       float: left;
-      width: 46.3px;
-      height: 46.3px;
-      max-width: 46.3px;
-      max-height: 46.3px;
+      min-height:12.5%;
+      min-width: 12.5%;
       background-color: #654321;
-      font-size:37.5px;
+      font-size:100%;
       text-align:center;
-      display: table-cell;
-      vertical-align:middle;
+      padding:0px;
       border: .25px solid black;
 
   }
 
   .beige {
       float: left;
-      width: 46.3px;
-      height: 46.3px;
-      max-width: 46.3px;
-      max-height: 46.3px;
+      min-height:12.5%;
+      min-width: 12.5%;
       background-color: #9e834f;
-      font-size:37.5px;
+      font-size:100%;
       text-align:center;
-      display: table-cell;
-      vertical-align:middle;
+      padding:0px;
       border: .25px solid black;
 
   }
   .brownwhitepiece {
       float: left;
-      width: 46.3px;
-      height: 46.3px;
-      max-width: 46.3px;
-      max-height: 46.3px;
+      min-height:12.5%;
+      min-width: 12.5%;
       background-color: #654321;
-      font-size:37.5px;
+      font-size:100%;
       text-align:center;
-      display: table-cell;
-      vertical-align:middle;
+      padding:0px;
       border: .25px solid black;
       color: #f0ead6
   }
   .beigewhitepiece {
       float: left;
-      width: 46.3px;
-      height: 46.3px;
-      max-width: 46.3px;
-      max-height: 46.3px;
+      min-height:12.5%;
+      min-width: 12.5%;
       background-color: #9e834f;
-      font-size:37.5px;
+      font-size:100%;
       text-align:center;
-      display: table-cell;
-      vertical-align:middle;
+      padding:0px;
       border: .25px solid black;
       color:#f0ead6
   }
+
+
+
+}
+
+@media screen and (max-width: 1100px) {
   .turnindicator {
     font-size: 30px;
     color:white;
@@ -245,96 +268,4 @@ body {
     font-style: italic;
     text-align: Center;
   }
-
-}
-
-@media screen and (max-width: 1020px) {
-  .chessboard {
-      width: 250px;
-      height: 250px;
-      max-width: 250px;
-      max-height: 250px;
-      margin-top: 100px;
-      border: 25px solid #333;
-
-      display:flex;
-      flex-wrap:wrap;
-      min-width:250px;
-  }
-
-}
-
-@media screen and (max-width: 1020px) {
-  .brown {
-      float: left;
-      width: 30.7px;
-      height: 30.7px;
-      max-width: 30.7px;
-      max-height: 30.7px;
-      background-color: #654321;
-      font-size:25px;
-      text-align:center;
-      display: table-cell;
-      vertical-align:middle;
-      border: .25px solid black;
-
-  }
-
-  .beige {
-      float: left;
-      width: 30.7px;
-      height: 30.7px;
-      max-width: 30.7px;
-      max-height: 30.7px;
-      background-color: #9e834f;
-      font-size:25px;
-      text-align:center;
-      display: table-cell;
-      vertical-align:middle;
-      border: .25px solid black;
-
-  }
-  .brownwhitepiece {
-      float: left;
-      width: 30.7px;
-      height: 30.7px;
-      max-width: 30.7px;
-      max-height: 30.7px;
-      background-color: #654321;
-      font-size:25px;
-      text-align:center;
-      display: table-cell;
-      vertical-align:middle;
-      border: .25px solid black;
-      color: #f0ead6
-  }
-  .beigewhitepiece {
-      float: left;
-      width: 30.7px;
-      height: 30.7px;
-      max-width: 30.7px;
-      max-height: 30.7px;
-      background-color: #9e834f;
-      font-size:25px;
-      text-align:center;
-      display: table-cell;
-      vertical-align:middle;
-      border: .25px solid black;
-      color:#f0ead6
-  }
-  .turnindicator {
-    font-size: 30px;
-    color:white;
-    margin-left: 50px;
-    margin-top: 150px;
-    font-family: 'Italiana', serif;
-
-  }
-
-  .right {
-    font-family: 'Italiana', serif;
-    font-style: italic;
-    text-align: Center;
-  }
-
 }
