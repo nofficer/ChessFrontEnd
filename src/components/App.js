@@ -3,6 +3,8 @@ import { Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { makeMove, getBoard, botMove, makeTurn, resetGame, movelistaction} from '../actions'
 import Fragment from 'react'
+import TurnText from './TurnText'
+import './index.css'
 
 
 
@@ -35,12 +37,8 @@ class App extends React.Component {
   componentDidMount(){
     this.moveList = []
     console.log("component did mount running")
-    this.props.makeTurn('Your move...')
+    this.props.makeTurn('Your Move...')
   }
-
-
-
-
 
 
   async holdMove(a){
@@ -70,9 +68,6 @@ class App extends React.Component {
     }
 
 
-
-
-
   makePiece(piece, i, colour){
     var pieceMap = {
       '4': '\u265C',
@@ -99,7 +94,7 @@ class App extends React.Component {
     }
       colour = colour + piececlass + ' col'
     return (
-          <div key={i} onClick = {(e) => this.holdMove(e.target.id)} id={i} class={colour} >{pieceMap[piece]}</div>
+          <div key={i} onClick = {(e) => this.holdMove(e.target.id)} id={i} className={colour} >{pieceMap[piece]}</div>
         )
   }
 
@@ -164,31 +159,33 @@ class App extends React.Component {
 
   render(){
     return (
-      <div class='bigbox'>
 
-      <div class="turnindicator">
-        <h1>
-        Bot Officer
-        </h1>
-        <h3 class='right'>
-        CHESS ROBOT
-        </h3>
-        <div>
-          {this.props.turn}
-          </div>
-          <button class='myB' onClick={() => this.resetfunc('Bot Moving...',['Yes'])}>
-          Switch Sides
-          </button>
-          <button class='myB' onClick={() => this.resetfunc('Your Move...',['No'])}>
-          New Game
-          </button>
-          </div>
-        <div class="chessboard container">
-            {this.renderList(this.props.board)}
-        </div>
+      <div className='bigbox'>
+
+            <div className="turnindicator">
+              <h1>
+              Bot Officer
+              </h1>
+              <h3 className='right'>
+              CHESS ROBOT
+              </h3>
+              <div>
+                <TurnText text={this.props.turn} />
+                </div>
+                <button className='myB' onClick={() => this.resetfunc('Bot Moving...',['Yes'])}>
+                Switch Sides
+                </button>
+                <button className='myB' onClick={() => this.resetfunc('Your Move...',['No'])}>
+                New Game
+                </button>
+                </div>
+              <div className="chessboard container">
+                  {this.renderList(this.props.board)}
+              </div>
 
 
-      </div>
+            </div>
+
     )
   }
 

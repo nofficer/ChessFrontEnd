@@ -1,0 +1,37 @@
+env: standard
+runtime: nodejs16
+service: chessfrontend
+
+
+instance_class: F1
+
+
+
+handlers:
+  - url: /static
+    static_dir: build/static
+
+
+  - url: /(.*\.(json|ico|js))$
+    static_files: build/\1
+    upload: build/.*\.(json|ico|js)$
+
+
+  - url: .*
+    static_files: build/index.html
+    upload: build/index.html
+
+
+  - url: /static/css/(.*)
+    static_files: build/static/css/\1
+    upload: build/static/css/(.*)
+
+  - url: /favicon\.ico
+    static_files: favicon.ico
+    upload: favicon\.ico
+
+automatic_scaling:
+  min_idle_instances: automatic
+  max_idle_instances: automatic
+  min_pending_latency: automatic
+  max_pending_latency: automatic
