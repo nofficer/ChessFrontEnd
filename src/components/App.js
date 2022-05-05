@@ -37,14 +37,13 @@ class App extends React.Component {
   componentDidMount(){
     this.moveList = []
     console.log("component did mount running")
-    this.props.makeTurn('Your Move...')
+    this.props.makeTurn('Loading...')
   }
 
 
   async holdMove(a){
     var prevBoard = this.props.board
     this.moveList.push(Number(a))
-    console.log(this.moveList)
     this.props.movelistaction(this.moveList)
     if (this.moveList.length==2){
         await this.props.makeMove([this.moveList,prevBoard, this.props.side])
@@ -104,9 +103,9 @@ class App extends React.Component {
       var i = -1
       var c = [0,2,4,6,9,11,13,15,16,18,20,22,25,27,29,31,32,34,36,38,41,43,45,47,48,50,52,54,57,59,61,63]
       var n = -1
-      return (matrix.map((row) =>{
+      return (matrix.map((row,indexAt) =>{
         n++
-        return (<div class='row row-cols-8 chessrow flex-nowrap'>{
+        return (<div key={indexAt} className='row row-cols-8 chessrow flex-nowrap'>{
           row.map((piece) => {
             i++
             if(row.includes(piece)) {
@@ -170,7 +169,7 @@ class App extends React.Component {
               CHESS ROBOT
               </h3>
               <div>
-                <TurnText text={this.props.turn} />
+                <TurnText makeTurn={this.props.makeTurn} text={this.props.turn} />
                 </div>
                 <button className='myB' onClick={() => this.resetfunc('Bot Moving...',['Yes'])}>
                 Switch Sides
@@ -180,7 +179,7 @@ class App extends React.Component {
                 </button>
                 </div>
               <div className="chessboard container">
-                  {this.renderList(this.props.board)}
+                  {this.props.turn.toLowerCase().includes('loading') ? <div><h1 style={{textAlign:'center',color:'white'}}>Loading...</h1></div> : this.renderList(this.props.board)}
               </div>
 
 

@@ -1,8 +1,9 @@
 import axios from 'axios'
 
 export default axios.create({
-  baseURL: 'https://chessbackend-dot-portfolio-320419.nn.r.appspot.com/'
+  baseURL: 'http://localhost:8080'
 })
 
 
 //'https://chess-back-end.herokuapp.com'
+// https://chessbackend-dot-portfolio-320419.nn.r.appspot.com/

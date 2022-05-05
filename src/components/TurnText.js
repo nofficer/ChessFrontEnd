@@ -3,7 +3,7 @@ import chess from '../apis/chess'
 
 
 
-const TurnText = ({text}) => {
+const TurnText = ({text,makeTurn}) => {
   const [loading,setLoading] = useState('loading')
 
   useEffect(() => {
@@ -17,6 +17,7 @@ const TurnText = ({text}) => {
       if(response.data==='ping'){
         console.log('ping received')
         setLoading('nope')
+        makeTurn('Your Move...')
       }
       else{
         console.log('loading still')
@@ -27,7 +28,7 @@ const TurnText = ({text}) => {
 
 
   if(loading==='loading'){
-    return(<p style={{color:'red'}}>Loading Please Wait Before Moving...</p>)
+    return(<p style={{color:'white'}}>Loading...</p>)
   }
   else{
     return(text)

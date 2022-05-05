@@ -17,6 +17,10 @@ const INITIAL_STATE = {
   movelist: []
 }
 
+// fresh board
+
+// [4, 2, 3, 5, 6, 3, 2, 4, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 10, 8, 9, 11, 12, 9, 8, 10]
+
 export default (state=INITIAL_STATE, action) => {
   switch(action.type) {
     case PLAYER_MOVE:
